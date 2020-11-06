@@ -1,23 +1,35 @@
 .leaflet-routing-container, .leaflet-routing-error {
     width: 320px;
     background-color: white;
-    padding-top: 4px;
+    padding-top: 1px;
     transition: all 0.2s ease;
     box-sizing: border-box;
 }
+
 
 .leaflet-control-container .leaflet-routing-container-hide {
     width: 32px;
     height: 32px;
 }
-
+.route-action {
+   background-color: transparent!important;
+}
+.route-title {
+  display: none
+}
+.route-title h5 {
+  margin: 8px 10px;
+}
 .leaflet-routing-container h2 {
     font-size: 14px;
+    margin: 0px;
 }
 
 .leaflet-routing-container h3 {
     font-size: 12px;
     font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .leaflet-routing-collapsible .leaflet-routing-geocoders {
@@ -26,15 +38,15 @@
 
 .leaflet-routing-alt, .leaflet-routing-geocoders, .leaflet-routing-error {
     padding: 6px;
-    margin-top: 2px;
-    margin-bottom: 6px;
+    margin-top: 0px;
+    margin-bottom: -1px;
     border-bottom: 1px solid #ccc;
     max-height: 320px;
     overflow-y: auto;
     transition: all 0.2s ease;
 }
 
-.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt, 
+.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt,
 .leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-geocoders {
     display: none;
 }
@@ -60,7 +72,7 @@
 }
 
 .leaflet-routing-alt::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
 }
 
 .leaflet-routing-alt::-webkit-scrollbar-track {
@@ -108,6 +120,16 @@
     width: calc(100% - 4px);
     line-height: 1.67;
     border: 1px solid #ccc;
+    padding: 3px 6px;
+}
+
+.btn-map-point {
+    float: inherit;
+    display: block;
+}
+
+.btn-map-point-cont {
+    margin: 10px
 }
 
 .leaflet-routing-geocoders button {
@@ -120,6 +142,7 @@
     float: right;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    border: none!important;
 }
 
 .leaflet-routing-add-waypoint:after {
@@ -144,7 +167,7 @@
     position: absolute;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     z-index: 1000; /* Arbitrary, but try to be above "most" things. */
 }
 
@@ -154,6 +177,14 @@
     border-radius: 0 0 4px 4px;
     background-color: white;
     cursor: pointer;
+}
+
+.leaflet-routing-geocoder-result table td {
+    padding: 2px 4px;
+}
+
+.leaflet-routing-geocoder-result table tr {
+     border-bottom: 1px solid #ccc;
 }
 
 .leaflet-routing-geocoder-result-open {
@@ -255,4 +286,18 @@
         width: 100%;
         height: 100%;
     }
+}
+
+.leaflet-routing-container .btn-show-hide {
+    width: 28px!important;
+    height: 28px!important;
+    margin-top: -1px;
+    line-height: 24px!important;
+    display: none!important;
+}
+.leaflet-routing-container-hide .btn-show-hide {
+    display: block!important;
+}
+.leaflet-routing-close {
+    float: left!important;
 }
